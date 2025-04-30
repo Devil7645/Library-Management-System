@@ -1,0 +1,136 @@
+
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 960px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs {
+    font-size: 20px;
+    color: #337ab7;
+}
+
+.breadcrumbs a {
+    color: #515151;
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+.edit-button {
+    background-color: #5b21b6;
+    margin-right: 70px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.edit-button:hover {
+    background-color: #5a56d4;
+}
+
+.section-title {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.cover-img {
+    margin-bottom: 30px;
+}
+
+.cover-img img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    object-fit: cover;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.info-item strong {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.barcode-container {
+    text-align: right; /* Keep the alignment even without the image */
+    /* You could also remove this if no other content needs right alignment */
+}
+
+/* Removed .barcode-image styles */
+
+.moral-of-book {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 20px;
+}
+
+.moral-of-book strong {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+    padding: 10px 20px;
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #5daeffbc;
+}

@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #635BFF;
+  --secondary-color: #5F5F5F;
+  --text-white: #FFFFFF;
+  --text-black: #222222;
+  --icon-color: #526B7A;
+  --bg-dark-blue: #0A2540;
+  --border-color: #E3E7EA;
+  --bg-light: #FFFFFF;
+  --card-title: #29343d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-direction: column;
+}
+
+.form-box {
+  width: 100%;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.toggle-buttons button.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.form.active-form {
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 15px;
+  color: var(--text-black);
+  background-color: transparent;
+}
+
+.form-btn {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.form-btn:hover {
+  background-color: #4c45d8;
+}
+
+.welcome-img {
+  width: 100%;
+  max-width: 250px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .form-btn {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}

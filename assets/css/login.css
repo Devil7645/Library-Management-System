@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #635BFF;
+    --secondary-color: #5F5F5F;
+    --text-white: #FFFFFF;
+    --text-black: #222222;
+    --border-color: #E3E7EA;
+    --bg-light: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1),
+        0 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    display: flex;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 0 50px;
+    flex-direction: column;
+    width: 50%;
+}
+
+.sign-in-container {
+    left: 0;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+}
+
+input {
+    background: #eee;
+    border: none;
+    padding: 12px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 6px;
+}
+
+button {
+    border-radius: 6px;
+    border: none;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-size: 16px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.ghost {
+    background-color: #FFFFFF;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-top: 150px;
+}
+
+button:hover {
+    background-color: #5146e0;
+    color: #E3E7EA;
+}
+
+/* Overlay */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: var(--primary-color);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    padding: 0 40px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.form-container p {
+    display: none;
+}
+
+.error {
+    color: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .form-container,
+    .overlay-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: 1 !important;
+    }
+
+    .sign-in-container,
+    .sign-up-container {
+        display: none;
+    }
+
+    .container:not(.right-panel-active) .sign-in-container,
+    .container.right-panel-active .sign-up-container {
+        display: flex;
+    }
+
+    .overlay-container {
+        display: none;
+    }
+
+    form {
+        padding: 40px 20px;
+        width: 100%;
+    }
+
+
+    .form-container p {
+        display: inline;
+    }
+
+    .mobile-switch {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .mobile-switch a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .mobile-switch a:hover {
+        text-decoration: underline;
+    }
+}

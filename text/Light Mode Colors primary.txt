@@ -1,0 +1,14 @@
+Light Mode Colors:
+	primary-color: #635BFF
+	secondary-color: #5F5F5F
+	text-white : #FFFFFF
+	text-black : #222222
+	Icon-Color: #526B7A
+	bg-dark-blue: #0A2540
+	border-color: #E3E7EA
+	Bg-light: #FFFFFF
+	Card-title: #29343d
+	
+Dark Mode Colors:
+	primary-color: #635BFF
+	secondary-color: #032635

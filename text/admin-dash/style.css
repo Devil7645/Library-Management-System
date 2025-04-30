@@ -1,0 +1,116 @@
+:root {
+    --sidebar-bg: #2E3A59;
+    --sidebar-text: #ffffff;
+    --main-bg: #f4f6f9;
+    --primary-color: #635BFF;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-item {
+    color: var(--sidebar-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .logout {
+    margin-top: auto;
+    color: #ff6b6b;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex: 1;
+    background: var(--main-bg);
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .header h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 10px;
+    }
+  
+    .nav {
+      flex-direction: row;
+      flex: 1;
+      justify-content: space-around;
+    }
+  
+    .main-content {
+      padding: 15px;
+    }
+  }

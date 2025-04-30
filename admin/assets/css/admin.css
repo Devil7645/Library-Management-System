@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f6fc;
+}
+
+/* for every pageout heading */
+.breadcrumbs {
+    font-size: 20px;
+    color: #337ab7;
+}
+
+.breadcrumbs a {
+    color: #515151;
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+
+.sidebar {
+    min-width: 250px;
+    background-color: white;
+    padding-top: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);    
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+
+.sidebar ul li {
+    padding: 10px;
+    padding-left: 30px;
+    margin: 5px 0;
+    color: #333;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.sidebar ul li.active:hover {
+    background-color: #5b21b6;
+}
+
+.sidebar ul li.active a {
+    background-color: #5b21b6;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.sidebar ul li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quick {
+    display: flex;
+}
+.quick p {
+    font-weight: 600;
+    margin: 8px 16px;
+}
+
+.topbar button {
+    border: none;
+    color: #f0f0f0;
+    background-color: #5b21b6;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.cards {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+}
+
+.card .icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.card .icon {
+    font-size: 20px;
+    color: #fff;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #555;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #eee;
+}
+
+/* Specific colors for each card */
+.card-yellow .icon-container{ background-color: #ffc107; } 
+.card-blue .icon-container{ background-color: #673ab4; } 
+.card-teal .icon-container{ background-color: #00bcd4; } 
+.card-green .icon-container{ background-color: #4caf50; } 
+.card-pink .icon-container{ background-color: #e91e63; } 
+
+/* Placeholder for book icon */ 
+.book-icon::before { 
+    content: "\1F56E"; /* Unicode for a book */ 
+    font-size: 24px; color: #fff; 
+} 
+/* Placeholder for user icon */ 
+.user-icon::before { 
+    content: "\2658"; /* Unicode for a knight (can be replaced with a more suitable user icon) */ 
+    font-size: 24px; color: #fff; 
+} 
+/* Placeholder for overdue icon (can be a variation of book or a warning sign) */ 
+.overdue-icon::before { 
+    content: "\1F56E"; /* Using book icon for now, can be changed */ 
+    font-size: 24px; color: #fff; 
+}
+
+
+
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart-box {
+    background-color: white;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.books-content {
+    /* display: flex; */
+    height: 100vh;
+}
+
+
+.search {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}

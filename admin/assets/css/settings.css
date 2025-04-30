@@ -1,0 +1,97 @@
+main {
+    flex: 1;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 700px;
+}
+
+/* Alert message */
+.alert {
+    background-color: #eafbea;
+    border-left: 5px solid #2ecc71;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    color: #2c662d;
+    border-radius: 4px;
+}
+
+/* Headings */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Profile photo preview */
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
