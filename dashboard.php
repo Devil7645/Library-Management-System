@@ -27,7 +27,7 @@
 
     <div class="dashboard-container">
         <div class="header">
-            <div class="welcome">Welcome John Peter</div>
+            <div class="welcome">Welcome Punit</div>
             <div class="library-info">Library Operating Hours: Monday to Saturday 9 AM to 7 PM, Sunday: Closed</div>
         </div>
 
