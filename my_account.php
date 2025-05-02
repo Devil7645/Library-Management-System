@@ -32,7 +32,7 @@
         </div>
 
         <div class="user-info-container">
-            <img src="#" alt="Profile Photo" class="profile-photo">
+            <img src="assets/images/default-user.jpeg" alt="Profile Photo" class="profile-photo">
             
             <button class="edit-button">Edit Profile</button>
             <div class="user-info">
