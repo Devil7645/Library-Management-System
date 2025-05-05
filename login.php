@@ -98,8 +98,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['nameId'] = $user_nameId;
                 $_SESSION['name'] = $name;
 
-                // Redirect to dashboard
-                header('Location: dashboard.php');
+                // Redirect to My account
+                header('Location: my_account.php');
                 exit();
             } else {
                 $signup_error = "Something went wrong! Please try again.";
